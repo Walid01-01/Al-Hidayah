@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="আল হিদায়াহ ইনস্টিটিউটের অ্যাডমিন ড্যাশবোর্ড।">
+  <meta name="theme-color" content="#FBF7F0">
+  <title>অ্যাডমিন ড্যাশবোর্ড | Al Hidayah Institute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="script.js" defer></script><script src="admin.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><img class="brand-logo" src="assets/al-hidayah-logo.jpg" alt=""><span class="brand-main">AL-HIDAYAH</span><span class="brand-sub">— INSTITUTE</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="মেনু খুলুন"><span></span><span></span><span></span></button><nav class="primary-nav" id="primary-nav" aria-label="প্রধান নেভিগেশন"><a href="index.html">হোম</a><a href="about.html">আমাদের সম্পর্কে</a><a href="teachers.html">শিক্ষকবৃন্দ</a><a href="courses.html">কোর্সসমূহ</a><a class="active" href="admin-dashboard.html">অ্যাডমিন ড্যাশবোর্ড</a></nav><a class="button button-coral header-cta" href="free-class.html">ফ্রি ক্লাস নিন</a></div></header>
+  <main id="main" class="static-page-main">
+    <div class="container">
+      <section class="static-page-card admin-dashboard-card reveal" id="adminDashboard">
+        <p class="eyebrow"><span></span>অ্যাডমিন প্যানেল</p>
+        <h1>অ্যাডমিন <span class="accent-word">ড্যাশবোর্ড</span></h1>
+        <h2>স্বাগতম, Al Hidayah</h2>
+        <p>অ্যাডমিন প্যানেলে স্বাগতম।</p>
+        <section class="course-admin-section" aria-labelledby="courseAdminHeading">
+          <h2 id="courseAdminHeading">কোর্স পরিচালনা</h2>
+          <p>কোর্সের নাম ও মূল্য হালনাগাদ করুন। সেভ করলে পাবলিক হোমপেজ ও কোর্স পেজে পরিবর্তনগুলো দেখা যাবে।</p>
+          <p class="course-storage-note">পরিবর্তনগুলো এই ব্রাউজারেই সংরক্ষিত হবে।</p>
+          <form id="courseCatalogForm">
+            <div class="course-admin-list">
+              <fieldset class="course-admin-item">
+                <legend>হিফজুল কোরআন</legend>
+                <label>কোর্সের নাম<input type="text" data-course-name="hifz" required></label>
+                <label>মূল্য (ঐচ্ছিক)<input type="text" data-course-price-input="hifz" placeholder="মূল্য ও মুদ্রা লিখুন, যেমন: $25 / মাস"></label>
+              </fieldset>
+              <fieldset class="course-admin-item">
+                <legend>সহীহ কুরআন শিক্ষা</legend>
+                <label>কোর্সের নাম<input type="text" data-course-name="recitation" required></label>
+                <label>মূল্য (ঐচ্ছিক)<input type="text" data-course-price-input="recitation" placeholder="মূল্য ও মুদ্রা লিখুন, যেমন: $25 / মাস"></label>
+              </fieldset>
+              <fieldset class="course-admin-item">
+                <legend>ইসলামী শিক্ষা ও মূল্যবোধ</legend>
+                <label>কোর্সের নাম<input type="text" data-course-name="islamic-studies" required></label>
+                <label>মূল্য (ঐচ্ছিক)<input type="text" data-course-price-input="islamic-studies" placeholder="মূল্য ও মুদ্রা লিখুন, যেমন: $25 / মাস"></label>
+              </fieldset>
+            </div>
+            <button class="button button-coral course-admin-save" type="submit">কোর্স আপডেট করুন</button>
+            <p class="form-message" id="courseCatalogMessage" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+        <section class="course-admin-section" aria-labelledby="teacherAdminHeading">
+          <h2 id="teacherAdminHeading">শিক্ষক পরিচালনা</h2>
+          <p>শিক্ষকের তথ্য ও ছবি হালনাগাদ করুন। সেভ করলে হোমপেজ ও শিক্ষক পেজে পরিবর্তনগুলো দেখা যাবে।</p>
+          <p class="course-storage-note">পরিবর্তনগুলো এই ব্রাউজারেই সংরক্ষিত হবে।</p>
+          <form id="teacherProfilesForm">
+            <div class="course-admin-list">
+              <fieldset class="course-admin-item" data-teacher-editor="teacher-1">
+                <legend>শিক্ষক ১</legend>
+                <div class="teacher-admin-preview teacher-arch teacher-art-one" data-teacher-preview="teacher-1" role="img" aria-label="শিক্ষকের প্রতীকী ছবি"></div>
+                <label>নাম<input type="text" data-teacher-field="name" required></label>
+                <label>বিষয়<input type="text" data-teacher-field="subject"></label>
+                <label>বিশেষজ্ঞতা<input type="text" data-teacher-field="specialty"></label>
+                <label>যোগ্যতা<input type="text" data-teacher-field="qualification"></label>
+                <label>শিক্ষার্থীর সংখ্যা<input type="text" data-teacher-field="students"></label>
+                <label>ছবি আপলোড (PNG, JPG বা WebP; সর্বোচ্চ ৫১২ KB)<input type="file" accept="image/png,image/jpeg,image/webp" data-teacher-photo="teacher-1"></label>
+                <button class="button button-outline teacher-photo-remove" type="button" data-remove-teacher-photo="teacher-1">ছবি সরান</button>
+              </fieldset>
+              <fieldset class="course-admin-item" data-teacher-editor="teacher-2">
+                <legend>শিক্ষক ২</legend>
+                <div class="teacher-admin-preview teacher-arch teacher-art-two" data-teacher-preview="teacher-2" role="img" aria-label="শিক্ষকের প্রতীকী ছবি"></div>
+                <label>নাম<input type="text" data-teacher-field="name" required></label>
+                <label>বিষয়<input type="text" data-teacher-field="subject"></label>
+                <label>বিশেষজ্ঞতা<input type="text" data-teacher-field="specialty"></label>
+                <label>যোগ্যতা<input type="text" data-teacher-field="qualification"></label>
+                <label>শিক্ষার্থীর সংখ্যা<input type="text" data-teacher-field="students"></label>
+                <label>ছবি আপলোড (PNG, JPG বা WebP; সর্বোচ্চ ৫১২ KB)<input type="file" accept="image/png,image/jpeg,image/webp" data-teacher-photo="teacher-2"></label>
+                <button class="button button-outline teacher-photo-remove" type="button" data-remove-teacher-photo="teacher-2">ছবি সরান</button>
+              </fieldset>
+              <fieldset class="course-admin-item" data-teacher-editor="teacher-3">
+                <legend>শিক্ষক ৩</legend>
+                <div class="teacher-admin-preview teacher-arch teacher-art-three" data-teacher-preview="teacher-3" role="img" aria-label="শিক্ষকের প্রতীকী ছবি"></div>
+                <label>নাম<input type="text" data-teacher-field="name" required></label>
+                <label>বিষয়<input type="text" data-teacher-field="subject"></label>
+                <label>বিশেষজ্ঞতা<input type="text" data-teacher-field="specialty"></label>
+                <label>যোগ্যতা<input type="text" data-teacher-field="qualification"></label>
+                <label>শিক্ষার্থীর সংখ্যা<input type="text" data-teacher-field="students"></label>
+                <label>ছবি আপলোড (PNG, JPG বা WebP; সর্বোচ্চ ৫১২ KB)<input type="file" accept="image/png,image/jpeg,image/webp" data-teacher-photo="teacher-3"></label>
+                <button class="button button-outline teacher-photo-remove" type="button" data-remove-teacher-photo="teacher-3">ছবি সরান</button>
+              </fieldset>
+            </div>
+            <button class="button button-coral course-admin-save" type="submit">শিক্ষক আপডেট করুন</button>
+            <p class="form-message" id="teacherProfilesMessage" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+        <section class="course-admin-section" aria-labelledby="trialRequestsHeading">
+          <h2 id="trialRequestsHeading">ফ্রি ট্রায়াল অনুরোধ</h2>
+          <p>ওয়েবসাইটের ফ্রি ট্রায়াল ফর্ম থেকে জমা দেওয়া তথ্য এখানে দেখা যাবে।</p>
+          <p class="course-storage-note">অনুরোধগুলো এই ব্রাউজারেই সংরক্ষিত হবে।</p>
+          <div class="trial-requests-list" id="trialRequestsList" aria-live="polite"></div>
+        </section>
+        <div class="admin-dashboard-actions">
+          <a class="button button-outline" href="index.html">ওয়েবসাইট দেখুন</a>
+          <a class="button button-coral" href="admin.html" id="adminLogout">লগআউট</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer section-pattern"><div class="container"><div class="footer-bottom"><span>© 2026 Al Hidayah Institute. সর্বস্বত্ব সংরক্ষিত.</span><a href="index.html">হোমে ফিরে যান</a></div></div></footer>
+</body>
+</html>

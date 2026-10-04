@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="আল হিদায়াহ ইনস্টিটিউটের অ্যাডমিন লগইন।">
+  <meta name="theme-color" content="#FBF7F0">
+  <title>অ্যাডমিন লগইন | Al Hidayah Institute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="script.js" defer></script><script src="admin.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><img class="brand-logo" src="assets/al-hidayah-logo.jpg" alt=""><span class="brand-main">AL-HIDAYAH</span><span class="brand-sub">— INSTITUTE</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="মেনু খুলুন"><span></span><span></span><span></span></button><nav class="primary-nav" id="primary-nav" aria-label="প্রধান নেভিগেশন"><a href="index.html">হোম</a><a href="about.html">আমাদের সম্পর্কে</a><a href="teachers.html">শিক্ষকবৃন্দ</a><a href="courses.html">কোর্সসমূহ</a><a class="active" href="admin.html">অ্যাডমিন লগইন</a></nav><a class="button button-coral header-cta" href="free-class.html">ফ্রি ক্লাস নিন</a></div></header>
+  <main id="main" class="static-page-main">
+    <div class="container">
+      <section class="static-page-card admin-login-card reveal">
+        <p class="eyebrow"><span></span>অ্যাডমিন</p>
+        <h1>অ্যাডমিন <span class="accent-word">লগইন</span></h1>
+        <form class="trial-form" id="adminLoginForm">
+          <label for="adminUsername">ইউজারনেম<input id="adminUsername" name="username" type="text" autocomplete="username" required></label>
+          <label for="adminPassword">পাসওয়ার্ড<input id="adminPassword" name="password" type="password" autocomplete="current-password" required></label>
+          <button class="button button-coral" type="submit">লগইন করুন</button>
+          <p class="form-message" id="adminLoginMessage" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer section-pattern"><div class="container"><div class="footer-bottom"><span>© 2026 Al Hidayah Institute. সর্বস্বত্ব সংরক্ষিত.</span><a href="index.html">হোমে ফিরে যান</a></div></div></footer>
+</body>
+</html>
